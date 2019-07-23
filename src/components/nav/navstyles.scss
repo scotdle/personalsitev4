@@ -1,0 +1,50 @@
+@import "../../fonts&colors";
+
+
+.NavLogo {
+
+  width: 40px;
+  height: 40px;
+
+}
+
+.NavLinks {
+
+
+  h1 {
+
+    font-family: $MainFont;
+    font-size: 30px;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+
+  }
+
+  a {
+    margin: 0;
+
+  }
+
+}
+
+.navbar {
+  padding: 0 10px 0 10px;
+}
+
+.linkActive {
+
+ background-color: $AccentColor;
+}
+
+#music {
+}
+
+#camera {
+
+}
+
+#dev-design {
+
+}
