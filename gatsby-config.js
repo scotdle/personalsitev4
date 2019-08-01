@@ -5,16 +5,7 @@ require("dotenv").config({
 module.exports = {
 
   plugins: [
-      `gatsby-plugin-sass`,
 
-      {
-          resolve: 'gatsby-source-filesystem',
-          options: {
-              name: 'img',
-              path: './src/assets/images',
-
-          }
-      },
 
       {
           resolve: `gatsby-source-contentful`,
@@ -25,6 +16,7 @@ module.exports = {
           },
 
       },
+      `gatsby-plugin-sass`,
       "gatsby-plugin-transition-link",
       `gatsby-plugin-sharp`]
 };
