@@ -16,6 +16,7 @@ const pageData = data.allContentfulPageDefaultData;
             </Col>
             <Row noGutter={'true'}>
                 <Col md={'5'}>
+                    <h1>TEST AREA FOR GIF</h1>
                 </Col>
                 <Col md={'7'}>
                     <div className={'bigNavigation'}>
@@ -46,5 +47,5 @@ export const query = graphql`
       }
     }
   }
-}`
+}`;
 
