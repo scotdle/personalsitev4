@@ -65,14 +65,7 @@ export default ({data}) => {
                                 </div>
                             </Col>
                         </Row>
-
-
-                        <Row noGutters={'true'}>
-
-                            <Col sm={'12'}>
-
-                            </Col>
-                        </Row>
+                        
                     </div>
                 )
             })}
