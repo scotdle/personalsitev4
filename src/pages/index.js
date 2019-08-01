@@ -11,15 +11,17 @@ const pageData = data.allContentfulPageDefaultData;
 
     return (
         <Container fluid={'true'}>
-            <Col md={'12'}>
-        <SCLogo/>
-            </Col>
-            <Row noGutter={'true'}>
-                <Col md={'5'}>
-                    <h1>TEST AREA FOR GIF</h1>
+            <div className={'bigNavigation'}>
+
+                <Col md={'12'}>
+                    <SCLogo/>
+
                 </Col>
-                <Col md={'7'}>
-                    <div className={'bigNavigation'}>
+                <Row noGutter={'true'}>
+                    <Col md={'5'}>
+                        <h1>TEST AREA FOR GIF</h1>
+                    </Col>
+                    <Col md={'7'}>
                         <Link to={pageData.edges[3].node.slug}><h1
                             className={'bigLink'}>{pageData.edges[3].node.pageTitle}</h1></Link>
                         <Link to={pageData.edges[2].node.slug}><h1
@@ -28,10 +30,11 @@ const pageData = data.allContentfulPageDefaultData;
                             className={'bigLink'}>{pageData.edges[1].node.pageTitle}</h1></Link>
                         <Link to={pageData.edges[0].node.slug}><h1
                             className={'bigLink'}>{pageData.edges[0].node.pageTitle}</h1>
-            </Link>
-        </div>
-                </Col>
-            </Row>
+                        </Link>
+                    </Col>
+                </Row>
+            </div>
+
         </Container>
     )
 
