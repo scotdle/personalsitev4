@@ -12,11 +12,11 @@ const pageData = data.allContentfulPageDefaultData;
     return (
         <Container fluid={'true'}>
             <div className={'bigNavigation'}>
-
+                <Row noGutter={'true'}>
                 <Col md={'12'}>
                     <SCLogo/>
-
                 </Col>
+                </Row>
                 <Row noGutter={'true'}>
                     <Col md={'5'}>
                         <h1>TEST AREA FOR GIF</h1>
