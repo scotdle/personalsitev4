@@ -1,0 +1,91 @@
+@import "universal_page_styles.scss";
+
+
+.eachProject {
+
+  padding-bottom: 60px;
+
+}
+
+
+.projectImage {
+
+  background-color: $ContainerColor;
+  padding: 10px;
+  box-shadow: 25px 25px $ContainerBoxShadowColor;
+
+
+}
+
+.imgContained {
+
+  border: solid 1px $ContainerColor;
+
+}
+
+
+.projectLogoContainer {
+
+  display: block;
+  text-align: center;
+
+}
+
+.projectLogo {
+
+  width: 75px;
+  height: 75px;
+  padding-bottom: 20px;
+  text-align: center;
+
+}
+
+.projectTitle {
+  font-family: $BoldFont;
+  font-style: italic;
+  text-align: center;
+
+}
+
+
+.projectLink {
+  font-size: 2vw;
+  float: left;
+}
+
+.techIcons {
+  margin-bottom: 0;
+  padding: 10px;
+
+  li {
+    display: inline;
+    text-decoration: none;
+    padding: 10px;
+
+  }
+}
+
+
+.techIconSVG {
+
+  width: 40px;
+  height: 40px;
+
+}
+
+@media (max-width: 768px) {
+
+  .projectDescription {
+
+    font-family: $MainFont;
+    background-color: $ContainerColor;
+    border: 1px solid black;
+  }
+
+  .eachProject {
+
+    padding-bottom: 0;
+    margin: 0;
+  }
+
+}

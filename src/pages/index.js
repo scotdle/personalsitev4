@@ -1,23 +1,37 @@
 import React from 'react';
-import Layout from '../components/layout'
 import SCLogo from '../components/sclogo/sclogo.js'
 import { Link, graphql, } from "gatsby"
-import './index.scss'
+import './page_styles/index.scss'
+import {Row, Col, Container} from 'react-bootstrap'
+
 
 
 export default ({data}) => {
 const pageData = data.allContentfulPageDefaultData;
 
     return (
-       <div>
+        <Container fluid={'true'}>
+            <Col md={'12'}>
         <SCLogo/>
-        <div className={'indexNavigation'}>
-            <Link to={'/music'}><h1>{pageData.edges[2].node.pageTitle}</h1></Link> |
-            <Link to={'/camera'}><h1>{pageData.edges[1].node.pageTitle}</h1></Link> |
-            <Link to={'/dev-design'}><h1>{pageData.edges[0].node.pageTitle}</h1>
+            </Col>
+            <Row noGutter={'true'}>
+                <Col md={'5'}>
+                </Col>
+                <Col md={'7'}>
+                    <div className={'bigNavigation'}>
+                        <Link to={pageData.edges[3].node.slug}><h1
+                            className={'bigLink'}>{pageData.edges[3].node.pageTitle}</h1></Link>
+                        <Link to={pageData.edges[2].node.slug}><h1
+                            className={'bigLink'}>{pageData.edges[2].node.pageTitle}</h1></Link>
+                        <Link to={pageData.edges[1].node.slug}><h1
+                            className={'bigLink'}>{pageData.edges[1].node.pageTitle}</h1></Link>
+                        <Link to={pageData.edges[0].node.slug}><h1
+                            className={'bigLink'}>{pageData.edges[0].node.pageTitle}</h1>
             </Link>
         </div>
-       </div>
+                </Col>
+            </Row>
+        </Container>
     )
 
 }

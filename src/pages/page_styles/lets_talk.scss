@@ -1,0 +1,20 @@
+@import "universal_page_styles.scss";
+
+.form {
+
+  font-family: $MainFont;
+  font-weight: $Heavy;
+
+}
+
+.nameHeader {
+
+  text-align: center;
+  font-family: $BoldFont;
+  font-style: italic;
+
+}
+
+.form-group {
+  font-size: 30px;
+}

@@ -1,0 +1,101 @@
+@import "../../fonts&colors";
+
+a:hover {
+  text-decoration: none !important;
+}
+
+.container-fluid {
+  background-color: $BackgroundColor;
+}
+
+.containerPadding {
+
+  padding: 80px;
+
+}
+
+.mainContainerPadding {
+
+  padding: 80px;
+
+}
+
+.titleAndQuote {
+
+
+}
+
+.sectionTitle {
+  font-family: $BoldFont;
+  font-style: italic;
+  font-size: 5vw;
+  text-align: center;
+}
+
+.pageTitle {
+  position: fixed;
+  font-family: $MainFont;
+  padding-left: 40px;
+  top: 7px;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 40px;
+  z-index: 3;
+
+}
+
+.pageHeaderText {
+  font-family: $CondensedFont;
+  font-weight: $Heavy;
+  padding-top: 70px;
+
+}
+
+
+.imgContained {
+  width: 90%;
+  height: 90%;
+  margin: 10px auto 20px;
+  display: block;
+
+
+}
+
+.containerDefault {
+
+  font-family: $MainFont;
+  background-color: $ContainerColor;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+
+  .containerDefault {
+
+    font-family: $MainFont;
+    background-color: $ContainerColor;
+    padding: 0;
+  }
+
+  .mainContainerPadding {
+
+    padding-left: 5px;
+    padding-right: 5px;
+
+
+  }
+
+  .sectionTitle {
+
+    font-size: 10vw;
+    text-align: center;
+
+  }
+
+  .pageTitle {
+    padding-top: 15px;
+    font-size: 20px;
+
+  }
+
+}

@@ -1,10 +1,12 @@
 import React from 'react';
 import { graphql, StaticQuery, Link } from 'gatsby';
+import {slide as Menu} from 'react-burger-menu';
 import './navstyles.scss';
-import "bootstrap/dist/css/bootstrap.min.css"
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
-import NavDropdown from 'react-bootstrap/NavDropdown'
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import AniLink from "gatsby-plugin-transition-link/AniLink";
+
+
 
 
 export default () => (
@@ -30,22 +32,38 @@ export default () => (
         }
         render={data => (
 
-            <div className={'NavArea'}>
-                <Navbar style={{padding: '0 10px 0 10px'}} expand="lg">
-                    <Navbar.Brand href="/"> <img className={'NavLogo'} src={data.contentfulSvgIcons.theIcon.file.url}/></Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="mr-auto NavLinks">
-
-                            <Link to="/music" className={'link'} activeClassName={'linkActive'}><h1 id={'music'}>{data.allContentfulPageDefaultData.edges[2].node.pageTitle}</h1></Link>
-                            <Link to="/camera" className={'link'} activeClassName={'linkActive'}><h1 id={'camera'}>{data.allContentfulPageDefaultData.edges[1].node.pageTitle}</h1></Link>
-                            <Link to="/dev-design" className={'link'} activeClassName={'linkActive'}><h1 id={'dev-design'}>{data.allContentfulPageDefaultData.edges[0].node.pageTitle}</h1></Link>
+            <div className={'navContainer'}>
+                <Link to={'/'}><img className={'NavLogo'} alt={'logo'} src={data.contentfulSvgIcons.theIcon.file.url}/></Link>
 
 
-                        </Nav>
-                    </Navbar.Collapse>
-                </Navbar>
+                <Menu right
+                      disableAutoFocus
+                      width={'100%'}
+                      burgerButtonClassName={"burgerButton"}
+                      overlayClassName={"menuOverlay"}
+                      menuClassName={"bigNavigation"}
+                      customCrossIcon={false}>
+                    <Link to={`/${data.allContentfulPageDefaultData.edges[3].node.slug}`} className={'bigLink'}
+                          activeClassName={'linkActive'}><h1
+                        id={data.allContentfulPageDefaultData.edges[3].node.slug}>{data.allContentfulPageDefaultData.edges[3].node.pageTitle}</h1>
+                    </Link>
+                    <Link to={`/${data.allContentfulPageDefaultData.edges[2].node.slug}`} className={'bigLink'}
+                          activeClassName={'linkActive'}><h1
+                        id={data.allContentfulPageDefaultData.edges[2].node.slug}>{data.allContentfulPageDefaultData.edges[2].node.pageTitle}</h1>
+                    </Link>
+                    <Link to={`/${data.allContentfulPageDefaultData.edges[1].node.slug}`} className={'bigLink'}
+                          activeClassName={'linkActive'}><h1
+                        id={data.allContentfulPageDefaultData.edges[1].node.slug}>{data.allContentfulPageDefaultData.edges[1].node.pageTitle}</h1>
+                    </Link>
+                    <Link to={`/${data.allContentfulPageDefaultData.edges[0].node.slug}`} className={'bigLink'}
+                          activeClassName={'linkActive'}><h1
+                        id={data.allContentfulPageDefaultData.edges[0].node.slug}>{data.allContentfulPageDefaultData.edges[0].node.pageTitle}</h1>
+                    </Link>
+
+                </Menu>
             </div>
+
+
         )}
         />
             )

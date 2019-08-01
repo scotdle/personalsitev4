@@ -1,17 +1,18 @@
 import React from 'react';
-import Layout from '../components/layout'
 import { Link, graphql, } from "gatsby"
-import './index.scss'
+import './page_styles/index.scss'
+import Layout from "../components/layout";
+
 
 
 export default ({data}) => {
 
     return (
         <Layout>
-
-<h1>music</h1>
-
+            <h1>camera</h1>
         </Layout>
+
     )
+
 
 }

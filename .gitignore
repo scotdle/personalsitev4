@@ -21,6 +21,10 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 
+# Idea folder
+.idea/
+
+
 # nyc test coverage
 .nyc_output
 
@@ -71,3 +75,4 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+

@@ -1,0 +1,88 @@
+@import "universal_page_styles.scss";
+
+
+.carousel {
+
+}
+
+
+.theAlbum {
+
+  padding: 15px;
+
+}
+
+.caption {
+
+  height: 35vw;
+
+}
+
+.albumTitle {
+  font-family: $BoldFont;
+  font-size: 4vw;
+  font-style: normal;
+  text-align: center;
+}
+
+.albumDescription {
+
+  padding: 20px;
+  font-size: 2.5vw;
+}
+
+.albumImage {
+
+  width: 100%;
+
+
+}
+
+.carousel-control-next {
+  margin-right: -8vw;
+
+}
+
+.carousel-control-prev {
+  margin-left: -8vw;
+
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 768px) {
+
+  .albumTitle {
+
+    font-size: 8vw;
+    padding: 30px;
+
+  }
+
+  .albumDescription {
+
+    padding: 20px;
+    font-size: 6vw;
+  }
+  .caption {
+
+    height: 60vh;
+
+  }
+
+  .carousel-control-next {
+    margin-right: -4vw;
+
+  }
+  .carousel-control-prev {
+    margin-left: -4vw;
+
+  }
+
+}
