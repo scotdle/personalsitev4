@@ -6,7 +6,6 @@ module.exports = {
 
   plugins: [
 
-
       {
           resolve: `gatsby-source-contentful`,
           options: {
@@ -16,6 +15,7 @@ module.exports = {
           },
 
       },
+      `gatsby-plugin-styled-components`,
       `gatsby-plugin-sass`,
       "gatsby-plugin-transition-link",
       `gatsby-plugin-sharp`]
