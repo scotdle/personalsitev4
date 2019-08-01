@@ -2,6 +2,7 @@ import React from 'react';
 import SCLogo from '../components/sclogo/sclogo.js'
 import { Link, graphql, } from "gatsby"
 import './page_styles/index.scss'
+import './page_styles/bootstraplocal.scss'
 import {Row, Col, Container} from 'react-bootstrap'
 
 
