@@ -24,7 +24,8 @@ class NameForm extends React.Component {
             <Layout>
 
                 <h1 className={'nameHeader'}>I hope we can talk soon {this.state.name}.</h1>
-                <Form className={'form'} name='contact' data-netlify='true' data-netlify-recaptcha='true'
+                <Form className={'form'} name='contact' data-netlify='true' data-netlify-honeypot="bot-field"
+
                       method='post'>
                     <Form.Group controlId="name">
                         <Form.Label>Name</Form.Label>
@@ -38,6 +39,7 @@ class NameForm extends React.Component {
                     <Form.Group controlId="message">
                         <Form.Label>Message</Form.Label>
                         <textarea className={"form-control"} rows={"7"} size={'lg'}></textarea>
+                        <input type="hidden" name="bot-field"/>
                     </Form.Group>
                 </Form>
                 <p>
