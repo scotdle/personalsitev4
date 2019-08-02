@@ -4,7 +4,11 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import './page_styles/lets_talk.scss'
 
-
+function encode(data) {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+        .join('&')
+}
 class NameForm extends React.Component {
     constructor(props) {
         super(props);
@@ -17,6 +21,19 @@ class NameForm extends React.Component {
         this.setState({name: event.target.value});
     }
 
+    handleSubmit = e => {
+        e.preventDefault();
+        const form = e.target;
+        fetch('/', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: encode({
+                'form-name': form.getAttribute('name'),
+                ...this.state,
+            }),
+        })
+
+    };
 
 
     render() {
@@ -25,7 +42,7 @@ class NameForm extends React.Component {
 
                 <h1 className={'nameHeader'}>I hope we can talk soon {this.state.name}.</h1>
                 <form className={'form'} name='contactMe' data-netlify='true' data-netlify-honeypot='bot-field'
-                      method='post' action='#'>
+                      method='post' onSubmit={this.handleSubmit}>
                     <input type="hidden" name="form-name" value="contactMe"/>
                     <Form.Group controlId="name">
                         <Form.Label>Name</Form.Label>
