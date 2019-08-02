@@ -18,14 +18,14 @@ class NameForm extends React.Component {
     }
 
 
+
     render() {
         return (
             <Layout>
 
                 <h1 className={'nameHeader'}>I hope we can talk soon {this.state.name}.</h1>
                 <Form className={'form'} name='contact' data-netlify='true' data-netlify-recaptcha='true'
-                      method='post'
-                      action="./musician.js/">
+                      method='post'>
                     <Form.Group controlId="name">
                         <Form.Label>Name</Form.Label>
                         <Form.Control size={'lg'} type="text" placeholder="whats your name?"
@@ -51,5 +51,4 @@ class NameForm extends React.Component {
         )
     }
 }
-
 export default NameForm
