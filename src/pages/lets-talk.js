@@ -28,17 +28,17 @@ class NameForm extends React.Component {
                       method='post'>
                     <Form.Group controlId="name">
                         <Form.Label>Name</Form.Label>
-                        <Form.Control size={'lg'} type="text" name={'yourName'} placeholder="whats your name?"
+                        <Form.Control size={'lg'} type="text" name='yourName' placeholder="whats your name?"
                                       onChange={this.handleChange}/>
                     </Form.Group>
                     <Form.Group controlId="emailAddress">
                         <Form.Label>Email</Form.Label>
-                        <Form.Control type="email" name={'yourEmail'} placeholder="enter your email" size={'lg'}/>
+                        <Form.Control type="email" name='yourEmail' placeholder="enter your email" size={'lg'}/>
                     </Form.Group>
                     <Form.Group controlId="message">
                         <Form.Label>Message</Form.Label>
-                        <textarea className={"form-control"} name={'yourMessage'} rows={"7"} size={'lg'}></textarea>
-                        <input type="hidden" name="bot-field" value={'contact'}/>
+                        <textarea className={"form-control"} name='yourMessage' rows={"7"} size={'lg'}></textarea>
+                        <input type="hidden" name="bot-field" value='contact'/>
                     </Form.Group>
                 </Form>
                 <p>
