@@ -26,6 +26,7 @@ class NameForm extends React.Component {
                 <h1 className={'nameHeader'}>I hope we can talk soon {this.state.name}.</h1>
                 <form className={'form'} name='contact' data-netlify='true' data-netlify-honeypot='bot-field'
                       method='post'>
+                    <input type="hidden" name="form-name" value="contact"/>
                     <Form.Group controlId="name">
                         <Form.Label>Name</Form.Label>
                         <Form.Control size={'lg'} type="text" name='yourName' placeholder="whats your name?"
