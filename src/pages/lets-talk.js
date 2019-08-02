@@ -39,7 +39,7 @@ class NameForm extends React.Component {
                     <Form.Group controlId="message">
                         <Form.Label>Message</Form.Label>
                         <textarea className={"form-control"} name='yourMessage' rows={"7"} size={'lg'}></textarea>
-                        <input type="hidden" name="bot-field" value='contact'/>
+                        <input type="hidden" name="bot-field"/>
                     </Form.Group>
                 </form>
                 <p>
