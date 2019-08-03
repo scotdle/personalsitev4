@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, graphql, } from "gatsby"
-import './page_styles/index.scss'
+import './page_styles/photographer.scss'
 import Layout from "../components/layout";
-import {Carousel, Col, Row} from "react-bootstrap";
+import {Col, Row} from "react-bootstrap";
 import Img from "gatsby-image";
 
 
@@ -23,15 +23,22 @@ export default ({data}) => {
                     <h1 className={'pageHeaderText'}>"{pageHeaderText}"</h1>
                 </Col>
             </Row>
-            {favoriteShots.map((eachFavoritePhoto, index) => {
-                return (
-                    <div className={'theShot'}>
-                        <Img fluid={eachFavoritePhoto.theShot.fluid}/>
-                    </div>
+            <Col lg={'12'} className={'columnLayout'}>
 
-                )
+                {favoriteShots.map((eachFavoritePhoto, index) => {
+                    return (
+                        <div className={'theShot'}>
+                            <div className={'photoName'}>
+                                <h1>{eachFavoritePhoto.shotName}</h1>
+                                <p>{eachFavoritePhoto.shotDescription}</p>
+                            </div>
+                            <Img fluid={eachFavoritePhoto.theShot.fluid}/>
 
-            })}
+                        </div>
+                    )
+
+                })}
+            </Col>
         </Layout>
 
     )
@@ -46,11 +53,11 @@ export const query = graphql`
     pageHeaderText
   }
 
-  allContentfulFavoriteShots(sort: {fields: id}) {
+  allContentfulFavoriteShots(sort: {fields: updatedAt, order: DESC}) {
     edges {
       node {
         theShot {
-          fluid(quality: 100) {
+          fluid(quality: 100, maxHeight: 1000) {
         ...GatsbyContentfulFluid
           }
         }
