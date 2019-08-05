@@ -69,11 +69,17 @@ h1:hover {
   height: 30px;
   left: initial;
   top: 15px;
+
 }
 
+.burgerButton:hover {
+
+  background-color: $AccentColor;
+}
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: black;
+  height: 10%;
 }
 
 

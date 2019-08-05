@@ -1,7 +1,11 @@
 @import "universal_page_styles.scss";
 
 
-.carousel {
+.musicLetter {
+
+  font-family: $MainFont;
+  font-size: 28px;
+  padding: 0 80px 80px 80px;
 
 }
 
@@ -58,30 +62,43 @@
 
 @media (max-width: 768px) {
 
+  .musicLetter {
+
+    font-family: $MainFont;
+    font-size: 20px;
+    padding: 30px 30px 80px 30px;
+
+  }
+
   .albumTitle {
 
-    font-size: 8vw;
-    padding: 30px;
+    font-size: 40px;
+    padding: 20px;
 
   }
 
   .albumDescription {
 
     padding: 20px;
-    font-size: 6vw;
+    font-size: 25px;
   }
   .caption {
 
-    height: 60vh;
+    height: 100%;
 
   }
 
   .carousel-control-next {
-    margin-right: -4vw;
+    margin-right: 0;
+    top: 80px;
+    width: 5%;
 
   }
   .carousel-control-prev {
-    margin-left: -4vw;
+    margin-left: 0;
+    top: 80px;
+
+    width: 5%;
 
   }
 

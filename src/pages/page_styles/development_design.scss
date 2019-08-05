@@ -80,11 +80,18 @@
     font-family: $MainFont;
     background-color: $ContainerColor;
     border: 1px solid black;
+    padding: 10px;
+
+    h2 {
+      font-size: 25px;
+
+    }
+
   }
 
   .eachProject {
 
-    padding-bottom: 0;
+    padding-bottom: 70px;
     margin: 0;
   }
 

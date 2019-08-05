@@ -12,7 +12,7 @@ a:hover {
 
 .mainContainerPadding {
 
-  padding: 80px;
+  padding: 60px;
 
 }
 
@@ -31,7 +31,6 @@ a:hover {
 .pageTitle {
   position: fixed;
   font-family: $MainFont;
-  padding-left: 40px;
   top: 7px;
   font-style: italic;
   font-weight: 800;
@@ -43,7 +42,7 @@ a:hover {
 .pageHeaderText {
   font-family: $CondensedFont;
   font-weight: $Heavy;
-  padding-top: 70px;
+  padding: 5vh;
 
 }
 
@@ -75,8 +74,8 @@ a:hover {
 
   .mainContainerPadding {
 
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0;
+    padding-right: 0;
 
 
   }
@@ -89,8 +88,17 @@ a:hover {
   }
 
   .pageTitle {
-    padding-top: 15px;
+    padding-top: 10px;
+    padding-left: 60px;
     font-size: 20px;
+
+  }
+
+  .pageHeaderText {
+    font-family: $CondensedFont;
+    font-weight: $Heavy;
+    font-size: 10vw;
+    padding-top: 40px;
 
   }
 

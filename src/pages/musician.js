@@ -9,6 +9,7 @@ import Img from 'gatsby-image'
 export default ({data}) => {
     const pageTitle = data.contentfulPageDefaultData.pageTitle;
     const pageHeaderText = data.contentfulPageDefaultData.pageHeaderText;
+    const pageLetter = data.contentfulPageDefaultData.pageDescription.internal.content;
     const AllAlbums = data.allContentfulMusicImInto.edges.map((edge) => edge.node);
 
 
@@ -21,6 +22,11 @@ export default ({data}) => {
                 </Col>
                 <Col sm={'8'}>
                     <h1 className={'pageHeaderText'}>"{pageHeaderText}"</h1>
+                </Col>
+            </Row>
+            <Row>
+                <Col sm={'12'} className={'containerPadding musicLetter'}>
+                    <p>{pageLetter}</p>
                 </Col>
             </Row>
             <Row>
@@ -72,6 +78,11 @@ query getMusicData {
   contentfulPageDefaultData(slug: {eq: "musician"}) {
     pageTitle
     pageHeaderText
+    pageDescription{
+      internal {
+        content
+      }
+    }
   }
   allContentfulMusicImInto {
     edges {

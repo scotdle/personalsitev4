@@ -23,14 +23,14 @@ const pageData = data.allContentfulPageDefaultData;
                         <h1>TEST AREA FOR GIF</h1>
                     </Col>
                     <Col md={'7'}>
-                        <Link to={pageData.edges[3].node.slug}><h1
-                            className={'bigLink'}>{pageData.edges[3].node.pageTitle}</h1></Link>
-                        <Link to={pageData.edges[2].node.slug}><h1
-                            className={'bigLink'}>{pageData.edges[2].node.pageTitle}</h1></Link>
+                        <Link to={pageData.edges[0].node.slug}><h1
+                            className={'bigLink'}>{pageData.edges[0].node.pageTitle}</h1></Link>
                         <Link to={pageData.edges[1].node.slug}><h1
                             className={'bigLink'}>{pageData.edges[1].node.pageTitle}</h1></Link>
-                        <Link to={pageData.edges[0].node.slug}><h1
-                            className={'bigLink'}>{pageData.edges[0].node.pageTitle}</h1>
+                        <Link to={pageData.edges[2].node.slug}><h1
+                            className={'bigLink'}>{pageData.edges[2].node.pageTitle}</h1></Link>
+                        <Link to={pageData.edges[3].node.slug}><h1
+                            className={'bigLink'}>{pageData.edges[3].node.pageTitle}</h1>
                         </Link>
                     </Col>
                 </Row>
@@ -42,7 +42,7 @@ const pageData = data.allContentfulPageDefaultData;
 }
 export const query = graphql`
    query getPageData {
-  allContentfulPageDefaultData {
+  allContentfulPageDefaultData(sort: {fields: createdAt, order: ASC}) {
     edges {
       node {
         id

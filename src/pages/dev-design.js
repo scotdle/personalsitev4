@@ -9,7 +9,6 @@ import Img from 'gatsby-image'
 
 export default ({data}) => {
     const pageTitle = data.contentfulPageDefaultData.pageTitle;
-
     const pageHeaderText = data.contentfulPageDefaultData.pageHeaderText;
     const AllProjects = data.allContentfulProjects.edges.map((edge) => edge.node);
     const GithubIcon = data.Github.theIcon.file.url;
@@ -27,6 +26,8 @@ export default ({data}) => {
                     <h1 className={'pageHeaderText'}>"{pageHeaderText}"</h1>
                 </Col>
             </Row>
+            <h1 className={'sectionTitle'}>My Work</h1>
+
             {AllProjects.map((project, index) => {
                 console.log(project);
                 return (
@@ -39,8 +40,9 @@ export default ({data}) => {
                                 </div>
                             </Col>
                             <Col lg={'6'}>
-                                <div className={'containerDefault projectDescription'}
-                                     style={{backgroundColor: project.projectColor}}>
+                                <div className={'containerDefault'} style={{backgroundColor: project.projectColor}}>
+                                    <div className={'projectDescription'}
+                                         style={{backgroundColor: project.projectColor}}>
                                     <div className={'projectLogoContainer'}>
                                         <img className={'projectLogo'} src={project.projectLogo.file.url}/>
                                     </div>
@@ -62,10 +64,12 @@ export default ({data}) => {
                                             )
                                         })}
                                     </ul>
+                                    </div>
+
                                 </div>
                             </Col>
+
                         </Row>
-                        
                     </div>
                 )
             })}
