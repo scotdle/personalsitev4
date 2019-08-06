@@ -53,7 +53,7 @@ export const query = graphql`
     pageHeaderText
   }
 
-  allContentfulFavoriteShots(sort: {fields: updatedAt, order: DESC}) {
+  allContentfulFavoriteShots(sort: {fields: photoRating, order: DESC}) {
     edges {
       node {
         theShot {

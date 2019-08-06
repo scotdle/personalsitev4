@@ -29,6 +29,10 @@ const pageData = data.allContentfulPageDefaultData;
                             className={'bigLink'}>{pageData.edges[1].node.pageTitle}</h1></Link>
                         <Link to={pageData.edges[2].node.slug}><h1
                             className={'bigLink'}>{pageData.edges[2].node.pageTitle}</h1></Link>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col lg={'12'}>
                         <Link to={pageData.edges[3].node.slug}><h1
                             className={'bigLink'}>{pageData.edges[3].node.pageTitle}</h1>
                         </Link>

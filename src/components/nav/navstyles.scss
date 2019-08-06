@@ -69,12 +69,19 @@ h1:hover {
   height: 30px;
   left: initial;
   top: 15px;
+  transition: all .1s ease-in-out;
+
+  :focus {
+    outline: none !important;
+
+  }
+
 
 }
 
 .burgerButton:hover {
+  transform: scale(1.1);
 
-  background-color: $AccentColor;
 }
 /* Color/shape of burger icon bars */
 .bm-burger-bars {

@@ -13,6 +13,10 @@ export default ({data}) => {
     const AllProjects = data.allContentfulProjects.edges.map((edge) => edge.node);
     const GithubIcon = data.Github.theIcon.file.url;
     const LinkSVG = data.LinkSVG.theIcon.file.url;
+    const resumeSVG = data.resumeSVG.theIcon.file.url;
+    const resumeLink = data.resumeSVG.svgReference.theFile.file.url;
+
+
 
 
 
@@ -26,6 +30,7 @@ export default ({data}) => {
                     <h1 className={'pageHeaderText'}>"{pageHeaderText}"</h1>
                 </Col>
             </Row>
+
             <h1 className={'sectionTitle'}>My Work</h1>
 
             {AllProjects.map((project, index) => {
@@ -70,10 +75,21 @@ export default ({data}) => {
                             </Col>
 
                         </Row>
+
                     </div>
                 )
             })}
 
+            <Row>
+                <Col lg={'12'}>
+                    <h1 className={'sectionTitle'}>Download My Resume</h1>
+
+                    <div className={'resumeSVG'}>
+                        <a href={resumeLink}><img src={resumeSVG}/></a>
+                    </div>
+
+                </Col>
+            </Row>
         </Layout>
     )
 
@@ -135,5 +151,19 @@ export const query = graphql`
       }
     }
   }
+   resumeSVG: contentfulSvgIcons(svgIconTitle: {eq: "Resume SVG"}) {
+    theIcon {
+      file {
+        url
+      }
+    }
+    svgReference {
+      theFile {
+        file {
+          url
+    }
+  }
+}
+  } 
 }
 `
