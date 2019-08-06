@@ -96,3 +96,22 @@
   }
 
 }
+
+.resumeContainer {
+  background-color: $ContainerColor;
+
+
+}
+
+.resumeSVG {
+  text-align: center;
+
+  img {
+    font-family: $MainFont;
+    height: 100px;
+    width: 100px;
+  }
+
+
+}
+

@@ -1,17 +1,13 @@
 @import "universal_page_styles.scss";
 
 .photoName {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity .3s;
+
+  font-family: $MainFont;
+  padding: 20px;
+
+  h1 {
+    font-weight: $Heavy;
+  }
 
 
 }
@@ -38,10 +34,6 @@
 
 .theShot {
   position: relative;
+  background-color: $ContainerColor;
 }
 
-.theShot:hover .photoName {
-  opacity: 1;
-  background: rgba(255, 255, 255, 0.7);
-
-}
