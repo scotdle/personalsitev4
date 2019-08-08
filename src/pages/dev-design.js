@@ -2,7 +2,7 @@ import React from 'react';
 import {graphql} from "gatsby"
 import './page_styles/development_design.scss'
 import Layout from "../components/layout";
-import {Row, Col} from 'react-bootstrap'
+import {Row, Col, Image} from 'react-bootstrap'
 import Img from 'gatsby-image'
 
 
@@ -10,6 +10,7 @@ import Img from 'gatsby-image'
 export default ({data}) => {
     const pageTitle = data.contentfulPageDefaultData.pageTitle;
     const pageHeaderText = data.contentfulPageDefaultData.pageHeaderText;
+    const pageGIF = data.contentfulPageDefaultData.pageGIF.file.url;
     const AllProjects = data.allContentfulProjects.edges.map((edge) => edge.node);
     const GithubIcon = data.Github.theIcon.file.url;
     const LinkSVG = data.LinkSVG.theIcon.file.url;
@@ -23,10 +24,13 @@ export default ({data}) => {
     return (
         <Layout>
             <Row noGutters={'true'}>
-                <Col sm={'4'}>
+                <Col md={'4'}>
                     <h1 className={'pageTitle'}>{pageTitle}</h1>
+                    <div className={'pageGIF'}>
+                        <Image fluid src={pageGIF}/>
+                    </div>
                 </Col>
-                <Col sm={'8'}>
+                <Col md={'8'}>
                     <h1 className={'pageHeaderText'}>"{pageHeaderText}"</h1>
                 </Col>
             </Row>
@@ -82,7 +86,7 @@ export default ({data}) => {
 
             <Row>
                 <Col lg={'12'}>
-                    <h1 className={'sectionTitle'}>Download My Resume</h1>
+                    <h1 className={'sectionTitle'}>Looking for My Resume?</h1>
 
                     <div className={'resumeSVG'}>
                         <a href={resumeLink}><img src={resumeSVG}/></a>
@@ -97,7 +101,7 @@ export default ({data}) => {
 
 export const query = graphql`
  query getProjectsandData {
-  contentfulPageDefaultData(slug: {eq: "dev-design"}) {
+   contentfulPageDefaultData(slug: {eq: "dev-design"}) {
     pageTitle
     pageHeaderText
     pageTitleImage {
@@ -106,8 +110,14 @@ export const query = graphql`
       }
       title
     }
+    pageGIF {
+      file {
+        url
+      }
+    }
   }
-  allContentfulProjects {
+
+  allContentfulProjects (sort: {fields: projectRating, order: DESC}) {
     edges {
       node {
         projectTitle

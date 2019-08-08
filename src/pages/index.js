@@ -45,7 +45,7 @@ const pageData = data.allContentfulPageDefaultData;
 
 }
 export const query = graphql`
-   query getPageData {
+   query getIndexData {
   allContentfulPageDefaultData(sort: {fields: createdAt, order: ASC}) {
     edges {
       node {
