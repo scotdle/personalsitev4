@@ -4,6 +4,8 @@
 .bigNavigation {
 
   background-color: $BackgroundColor;
+  height: 100%;
+
 
   h1 {
     color: $DefaultTextColor;
@@ -15,6 +17,11 @@
     padding: 30px;
     text-decoration: none;
     text-align: center;
+    @media (max-width: 768px) {
+      font-size: 10vw;
+
+
+    }
 
   }
 
@@ -25,7 +32,7 @@
 
 }
 
-.bigLink {
+.contactLink, .bigLink {
   -webkit-transition: text-shadow 0.2s linear;
   -moz-transition: text-shadow 0.2s linear;
   -ms-transition: text-shadow 0.2s linear;
@@ -44,6 +51,14 @@ h1:hover {
 
 
 }
+
+.contactLink:hover {
+  text-decoration: none;
+  text-shadow: 15px 15px $AccentColor;
+
+
+}
+
 
 .link:hover {
   background-color: $AccentColor;
@@ -188,14 +203,3 @@ z-index: 0;
  background-color: $AccentColor;
 }
 
-
-#music {
-}
-
-#camera {
-
-}
-
-#dev-design {
-
-}

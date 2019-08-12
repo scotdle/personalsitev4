@@ -3,7 +3,6 @@ import SCLogo from '../components/sclogo/sclogo.js'
 import {Link, graphql} from "gatsby"
 import Img from 'gatsby-image'
 import './page_styles/index.scss'
-import './page_styles/bootstraplocal.scss'
 import {Row, Col, Container} from 'react-bootstrap'
 
 
@@ -21,7 +20,9 @@ export default ({data}) => {
                 <Row noGutter={'true'}>
                     <Col lg={'5 bioContainer'}>
                         <Img className={'bioPic'} fixed={pageData.edges[4].node.pageTitleImage.fixed}/>
-                        <h1>{pageData.edges[4].node.pageHeaderText}</h1>
+                        <div className={'pageHeaderText'}>
+                            <h2>{pageData.edges[4].node.pageHeaderText}</h2>
+                        </div>
                         <div className={'aboutMeText'}>
                             <p>{pageData.edges[4].node.pageDescription.pageDescription}</p>
                         </div>
