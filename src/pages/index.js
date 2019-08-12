@@ -12,12 +12,12 @@ export default ({data}) => {
     return (
         <Container fluid={'true'}>
             <div className={'bigNavigation'}>
-                <Row noGutter={'true'}>
+                <Row noGutters={'true'}>
                     <Col lg={'12'}>
                         <SCLogo/>
                     </Col>
                 </Row>
-                <Row noGutter={'true'}>
+                <Row noGutters={'true'}>
                     <Col lg={'5 bioContainer'}>
                         <Img className={'bioPic'} fixed={pageData.edges[4].node.pageTitleImage.fixed}/>
                         <div className={'pageHeaderText'}>
