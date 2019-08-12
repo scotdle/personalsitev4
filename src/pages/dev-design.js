@@ -10,7 +10,6 @@ import Img from 'gatsby-image'
 export default ({data}) => {
     const pageTitle = data.contentfulPageDefaultData.pageTitle;
     const pageHeaderText = data.contentfulPageDefaultData.pageHeaderText;
-    const pageGIF = data.contentfulPageDefaultData.pageGIF.file.url;
     const AllProjects = data.allContentfulProjects.edges.map((edge) => edge.node);
     const GithubIcon = data.Github.theIcon.file.url;
     const LinkSVG = data.LinkSVG.theIcon.file.url;
@@ -26,9 +25,6 @@ export default ({data}) => {
             <Row noGutters={'true'}>
                 <Col md={'4'}>
                     <h1 className={'pageTitle'}>{pageTitle}</h1>
-                    <div className={'pageGIF'}>
-                        <Image fluid src={pageGIF}/>
-                    </div>
                 </Col>
                 <Col md={'8'}>
                     <h1 className={'pageHeaderText'}>"{pageHeaderText}"</h1>
@@ -110,12 +106,7 @@ export const query = graphql`
       }
       title
     }
-    pageGIF {
-      file {
-        url
-      }
     }
-  }
 
   allContentfulProjects (sort: {fields: projectRating, order: DESC}) {
     edges {

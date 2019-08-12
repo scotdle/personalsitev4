@@ -1,28 +1,35 @@
 import React from 'react';
 import SCLogo from '../components/sclogo/sclogo.js'
-import { Link, graphql, } from "gatsby"
+import {Link, graphql} from "gatsby"
+import Img from 'gatsby-image'
 import './page_styles/index.scss'
 import './page_styles/bootstraplocal.scss'
 import {Row, Col, Container} from 'react-bootstrap'
 
 
-
 export default ({data}) => {
-const pageData = data.allContentfulPageDefaultData;
+    const pageData = data.allContentfulPageDefaultData;
 
     return (
         <Container fluid={'true'}>
             <div className={'bigNavigation'}>
                 <Row noGutter={'true'}>
-                <Col md={'12'}>
-                    <SCLogo/>
-                </Col>
+                    <Col lg={'12'}>
+                        <SCLogo/>
+                    </Col>
                 </Row>
                 <Row noGutter={'true'}>
-                    <Col md={'5'}>
-                        <h1>TEST AREA FOR GIF</h1>
+                    <Col lg={'5 bioContainer'}>
+                        <Img className={'bioPic'} fixed={pageData.edges[4].node.pageTitleImage.fixed}/>
+                        <h1>{pageData.edges[4].node.pageHeaderText}</h1>
+                        <div className={'aboutMeText'}>
+                            <p>{pageData.edges[4].node.pageDescription.pageDescription}</p>
+                        </div>
+                        <Link to={pageData.edges[3].node.slug}><h1
+                            className={'contactLink'}>{pageData.edges[3].node.pageTitle}</h1>
+                        </Link>
                     </Col>
-                    <Col md={'7'}>
+                    <Col lg={'7'}>
                         <Link to={pageData.edges[0].node.slug}><h1
                             className={'bigLink'}>{pageData.edges[0].node.pageTitle}</h1></Link>
                         <Link to={pageData.edges[1].node.slug}><h1
@@ -31,13 +38,7 @@ const pageData = data.allContentfulPageDefaultData;
                             className={'bigLink'}>{pageData.edges[2].node.pageTitle}</h1></Link>
                     </Col>
                 </Row>
-                <Row>
-                    <Col lg={'12'}>
-                        <Link to={pageData.edges[3].node.slug}><h1
-                            className={'bigLink'}>{pageData.edges[3].node.pageTitle}</h1>
-                        </Link>
-                    </Col>
-                </Row>
+
             </div>
 
         </Container>
@@ -51,9 +52,19 @@ export const query = graphql`
       node {
         id
         pageTitle
+        pageHeaderText
+        pageDescription {
+          pageDescription
+        }
         slug
+        pageTitleImage {
+          fixed(width: 125, height: 125) {
+         ...GatsbyContentfulFixed
+         }
+        }
       }
     }
   }
-}`;
+}`
+
 

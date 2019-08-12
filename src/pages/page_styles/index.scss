@@ -7,14 +7,45 @@ a:hover {
 }
 
 body {
-  height: 100vh;
+  height: 100%;
 }
 
+
+.bioContainer {
+
+  background-color: white;
+  text-align: center;
+  padding-top: 30px;
+  box-shadow: 25px 25px $ContainerBoxShadowColor;
+  height: 100%;
+
+
+  h1 {
+
+    font-style: normal;
+    font-size: 40px;
+  }
+
+}
+
+.bioPic {
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+
+
+}
+
+.aboutMeText {
+
+  font-family: $MainFont;
+  font-size: 20px;
+
+}
 .container-fluid {
 
   padding-right: 0;
   padding-left: 0;
-
 }
 
 
