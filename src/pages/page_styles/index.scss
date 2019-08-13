@@ -7,8 +7,10 @@ a:hover {
 }
 
 body {
-  height: 100%;
+
+  height: 100vh;
 }
+
 
 
 .bioContainer {
@@ -41,6 +43,7 @@ body {
 
   font-family: $MainFont;
   font-size: 20px;
+  padding: 10px;
 
 }
 
