@@ -16,25 +16,8 @@ module.exports = {
 
       },
 
-      {
-          resolve: `gatsby-plugin-favicon`,
-          options: {
-              logo: "./src/assets/images/sclogo.svg",
 
-              icons: {
-                  android: true,
-                  appleIcon: true,
-                  appleStartup: true,
-                  coast: false,
-                  favicons: true,
-                  firefox: true,
-                  yandex: false,
-                  windows: false
-              }
-          }
-      },
-      `gatsby-plugin-styled-components`,
+      `gatsby-plugin-react-helmet`,
       `gatsby-plugin-sass`,
-      "gatsby-plugin-transition-link",
       `gatsby-plugin-sharp`]
 };

@@ -4,8 +4,6 @@ import {slide as Menu} from 'react-burger-menu';
 import './navstyles.scss';
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import AniLink from "gatsby-plugin-transition-link/AniLink";
-
 
 
 

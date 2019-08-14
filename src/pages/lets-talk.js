@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
+import SEO from "../components/seo"
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import './page_styles/lets_talk.scss'
@@ -22,6 +23,10 @@ class NameForm extends React.Component {
     render() {
         return (
             <Layout>
+                <SEO
+                    title={"Let's Talk"}
+                    description={"Contact me!"}
+                />
                 <div className={'formContainer'}>
                 <h1 className={'nameHeader'}>I hope we can talk soon {this.state.name}.</h1>
                 <form className={'form'} name='contactMe' data-netlify='true' data-netlify-honeypot='bot-field'

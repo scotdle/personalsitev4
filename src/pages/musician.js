@@ -2,6 +2,7 @@ import React from 'react';
 import {Link, graphql,} from "gatsby"
 import './page_styles/music.scss'
 import Layout from "../components/layout";
+import SEO from "../components/seo"
 import {Row, Col, Carousel} from 'react-bootstrap'
 import Img from 'gatsby-image'
 
@@ -15,6 +16,10 @@ export default ({data}) => {
 
     return (
         <Layout>
+            <SEO
+                title={pageTitle}
+                description={pageLetter}
+            />
 
             <Row noGutters={'true'} className={'titleAndQuote'}>
                 <Col sm={'4'}>

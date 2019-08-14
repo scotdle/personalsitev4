@@ -1,5 +1,7 @@
 import React from 'react';
 import SCLogo from '../components/sclogo/sclogo.js'
+import SEO from "../components/seo"
+
 import {Link, graphql} from "gatsby"
 import Img from 'gatsby-image'
 import './page_styles/index.scss'
@@ -11,6 +13,10 @@ export default ({data}) => {
 
     return (
         <Container fluid={'true'}>
+            <SEO
+                title={'Scott "Scooter" Caudle'}
+                description={'Personal site of Scott Caudle.. a musician, photographer, and developer. you can just call him "scooter".'}
+            />
             <div className={'bigNavigation'}>
                 <Row noGutters={'true'}>
                     <Col lg={'12'}>
