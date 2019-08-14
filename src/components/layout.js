@@ -7,7 +7,7 @@ import {Container} from 'react-bootstrap'
 
 
 const  Layout = ({children}) => (
-    <div>
+    <div className={'siteContainer'}>
     <Nav/>
         <div className={'mainContainerPadding'}>
             {children}

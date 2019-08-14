@@ -43,12 +43,14 @@
 }
 
 .carousel-control-next {
-  margin-right: -8vw;
+  right: -3vw;
+  width: 5%;
 
 }
 
 .carousel-control-prev {
-  margin-left: -8vw;
+  left: -3vw;
+  width: 5%;
 
 }
 
@@ -61,6 +63,13 @@
 }
 
 @media (max-width: 768px) {
+
+  .row {
+
+    margin-left: 0;
+    margin-right: 0;
+
+  }
 
   .musicLetter {
 
@@ -89,16 +98,14 @@
   }
 
   .carousel-control-next {
-    margin-right: 0;
+    right: 0;
     top: 80px;
-    width: 5%;
 
   }
   .carousel-control-prev {
-    margin-left: 0;
+    left: 0;
     top: 80px;
 
-    width: 5%;
 
   }
 

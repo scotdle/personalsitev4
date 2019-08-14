@@ -21,7 +21,7 @@ export default ({data}) => {
                 description={pageLetter}
             />
 
-            <Row noGutters={'true'} className={'titleAndQuote'}>
+            <Row className={'titleAndQuote'}>
                 <Col sm={'4'}>
                     <h1 className={'pageTitle'}>{pageTitle}</h1>
                 </Col>
@@ -66,9 +66,6 @@ export default ({data}) => {
                             )
                         })}
                     </Carousel>
-                </Col>
-                <Col sm={'6'}>
-
                 </Col>
             </Row>
 

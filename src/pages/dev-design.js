@@ -59,18 +59,19 @@ export default ({data}) => {
                                     <h1 className={'projectTitle'}>{project.projectTitle}</h1>
                                     <h2>{project.projectDescription.projectDescription}</h2>
                                     <ul className={'techIcons'}>
-                                        <li><a href={project.projectLink}><img className={'techIconSVG'} src={LinkSVG}
-                                                                               alt={'github'}/></a></li>
-                                        <li><a href={project.githubLink}> <img className={'techIconSVG'}
-                                                                               src={GithubIcon} alt={'github'}/></a>
+                                        <li><a href={project.projectLink} target="_blank"><img className={'techIconSVG'}
+                                                                                               src={LinkSVG}
+                                                                                               alt={'github'}/></a></li>
+                                        <li><a href={project.githubLink} target="_blank"><img className={'techIconSVG'}
+                                                                                              src={GithubIcon} alt={'github'}/></a>
                                         </li>
                                     </ul>
                                     <p>created with:</p>
                                     <ul className={'techIcons'}>
-                                        {project.technologyUsed.map((eachTech, index) => {
+                                        {project.techUsed.map((eachTech, index) => {
                                             return (
-                                                <li key={index}><img className={'techIconSVG'} src={eachTech.file.url}/>
-                                                </li>
+                                                <li><a href={eachTech.svgLink} target="_blank"><img
+                                                    className={'techIconSVG'} src={eachTech.theIcon.file.url}/></a></li>
                                             )
                                         })}
                                     </ul>
@@ -90,7 +91,7 @@ export default ({data}) => {
                     <h1 className={'sectionTitle'}>Looking for My Resume?</h1>
 
                     <div className={'resumeSVG'}>
-                        <a href={resumeLink}><img src={resumeSVG}/></a>
+                        <a href={resumeLink}><img src={resumeSVG} target="_blank"/></a>
                     </div>
 
                 </Col>
@@ -133,16 +134,20 @@ export const query = graphql`
   
 
         }
-        projectLink
-        technologyUsed {
-          file {
-            url
+         techUsed {
+          svgLink
+          theIcon {
+            file {
+              url
+            }
           }
         }
+        projectLink
         githubLink
       }
     }
   }
+  
   Github: contentfulSvgIcons(svgIconTitle: {eq: "Github"}) {
     theIcon {
       file {

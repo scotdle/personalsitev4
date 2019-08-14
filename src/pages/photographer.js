@@ -28,22 +28,24 @@ export default ({data}) => {
                     <h1 className={'pageHeaderText'}>"{pageHeaderText}"</h1>
                 </Col>
             </Row>
-            <Col lg={'12'} className={'columnLayout'}>
+            <Row noGutters={'true'}>
+                <Col lg={'12'} className={'columnLayout'}>
 
-                {favoriteShots.map((eachFavoritePhoto, index) => {
-                    return (
-                        <div className={'theShot'}>
-                            <div className={'photoName'}>
-                                <h1>{eachFavoritePhoto.shotName}</h1>
-                                <p>{eachFavoritePhoto.shotDescription}</p>
+                    {favoriteShots.map((eachFavoritePhoto, index) => {
+                        return (
+                            <div className={'theShot'}>
+                                <div className={'photoName'}>
+                                    <h1>{eachFavoritePhoto.shotName}</h1>
+                                    <p>{eachFavoritePhoto.shotDescription}</p>
+                                </div>
+                                <Img fluid={eachFavoritePhoto.theShot.fluid}/>
+
                             </div>
-                            <Img fluid={eachFavoritePhoto.theShot.fluid}/>
+                        )
 
-                        </div>
-                    )
-
-                })}
-            </Col>
+                    })}
+                </Col>
+            </Row>
         </Layout>
 
     )
