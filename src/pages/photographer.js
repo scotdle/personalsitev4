@@ -38,7 +38,7 @@ export default ({data}) => {
                                     <h1>{eachFavoritePhoto.shotName}</h1>
                                     <p>{eachFavoritePhoto.shotDescription}</p>
                                 </div>
-                                <Img fluid={eachFavoritePhoto.theShot.fluid}/>
+                                <Img fluid={eachFavoritePhoto.theShot.fluid} alt={eachFavoritePhoto.shotName}/>
 
                             </div>
                         )

@@ -46,7 +46,8 @@ export default ({data}) => {
                         <Row>
                             <Col lg={'6'}>
                                 <div className={'projectImage'}>
-                                    <Img className={'imgContained'} fluid={project.projectImage.fluid}/>
+                                    <Img className={'imgContained'} fluid={project.projectImage.fluid}
+                                         alt={project.projectImage.file.fileName}/>
                                 </div>
                             </Col>
                             <Col lg={'6'}>
@@ -58,7 +59,9 @@ export default ({data}) => {
                                     </div>
                                     <h1 className={'projectTitle'}>{project.projectTitle}</h1>
                                     <h2>{project.projectDescription.projectDescription}</h2>
-                                    <ul className={'techIcons'}>
+                                        <p>links to the project:</p>
+
+                                        <ul className={'techIcons'}>
                                         <li><a href={project.projectLink} target="_blank"><img className={'techIconSVG'}
                                                                                                src={LinkSVG}
                                                                                                alt={'github'}/></a></li>
@@ -131,7 +134,9 @@ export const query = graphql`
           fluid(quality:100) {
         ...GatsbyContentfulFluid
           }
-  
+  file {
+            fileName
+          }
 
         }
          techUsed {

@@ -46,7 +46,7 @@ export default ({data}) => {
                                     <Row>
                                         <Col md={'5'}>
                                             <div className={'albumImage'}>
-                                                <Img fluid={album.albumArt.fluid}/>
+                                                <Img fluid={album.albumArt.fluid} alt={album.albumTitle}/>
                                             </div>
                                         </Col>
                                         <Col md={'7'}>

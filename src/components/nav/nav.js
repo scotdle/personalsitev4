@@ -44,7 +44,7 @@ export default () => (
 
                 <Menu right
                       disableAutoFocus
-                      customBurgerIcon={<img src={data.menuIcon.theIcon.file.url}/>}
+                      customBurgerIcon={<img src={data.menuIcon.theIcon.file.url} alt={'burgIcon'}/>}
                       width={'100%'}
                       burgerButtonClassName={"burgerButton"}
                       overlayClassName={"menuOverlay"}
