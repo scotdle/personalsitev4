@@ -12,7 +12,7 @@ function SEO(props) {
             title={props.title}
             meta={[
                 {name: 'title', content: props.title},
-
+                {name: 'theme-color', content: `#add9f4`},
                 {name: 'description', content: props.description}
 
             ]}
