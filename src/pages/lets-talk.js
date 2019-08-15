@@ -27,6 +27,9 @@ class NameForm extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
+        console.log('im submitting!');
+        console.log(this.state.yourName);
+
         const form = event.target;
         fetch("/", {
             method: "POST",
@@ -74,12 +77,11 @@ class NameForm extends React.Component {
                                   onChange={this.handleChange}></textarea>
                         <input type="hidden" name="bot-field" onChange={this.handleChange}/>
                     </Form.Group>
-                </form>
-                <p>
-                </p>
+
                 <Button type={'submit'} variant="secondary" size="lg" block>
                     <h3>submit</h3>
                 </Button>
+                    </form>
                 </div>
             </Layout>
 
