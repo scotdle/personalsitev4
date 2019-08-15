@@ -28,8 +28,6 @@ class NameForm extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
         console.log('im submitting!');
-        console.log(this.state.yourName);
-
         const form = event.target;
         fetch("/", {
             method: "POST",
