@@ -18,7 +18,6 @@ class NameForm extends React.Component {
         super(props);
         this.state = {};
 
-        this.handleChange = this.handleChange.bind(this);
     }
 
     handleChange = event => {
