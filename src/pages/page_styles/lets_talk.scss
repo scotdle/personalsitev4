@@ -2,25 +2,30 @@
 
 .formContainer {
 
+  font-family: $MainFont;
   padding: 10px;
 
 }
 
-.form {
 
-  font-family: $MainFont;
-  font-weight: $Heavy;
+.nameHeader, .thanksContainer {
 
-}
-
-.nameHeader {
-
+  padding: 30px;
   text-align: center;
   font-family: $BoldFont;
   font-style: italic;
 
 }
 
+.thanksContainer {
+
+  h1 {
+    font-size: 10vw;
+
+
+  }
+
+}
 .form-group {
   font-size: 30px;
 }

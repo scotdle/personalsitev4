@@ -30,9 +30,7 @@ class NameForm extends React.Component {
 
     handleSubmit = event => {
         this.setState({formSubmitted: true});
-
         event.preventDefault();
-        console.log('im submitting!');
         const form = event.target;
         fetch("/", {
             method: "POST",
@@ -91,7 +89,10 @@ class NameForm extends React.Component {
             ); else {
             return (
                 <Layout>
-                    <Thanks yourName={this.state.yourName}/>
+                    <div className={'thanksContainer'}>
+
+                        <Thanks yourName={this.state.yourName}/>
+                    </div>
                 </Layout>
             )
         }
