@@ -65,16 +65,18 @@ class NameForm extends React.Component {
                             <Form.Group controlId="name">
                                 <Form.Label>Name</Form.Label>
                                 <Form.Control size={'lg'} type="text" name='yourName' placeholder="whats your name?"
+                                              required
                                               onChange={this.handleChange}/>
                             </Form.Group>
                             <Form.Group controlId="emailAddress">
                                 <Form.Label>Email</Form.Label>
                                 <Form.Control type="email" name='yourEmail' placeholder="enter your email" size={'lg'}
+                                              required
                                               onChange={this.handleChange}/>
                             </Form.Group>
                             <Form.Group controlId="message">
                                 <Form.Label>Message</Form.Label>
-                                <textarea className={"form-control"} name='yourMessage' rows={"7"} size={'lg'}
+                                <textarea className={"form-control"} name='yourMessage' rows={"7"} size={'lg'} required
                                           onChange={this.handleChange}></textarea>
                                 <input type="hidden" name="bot-field" onChange={this.handleChange}/>
                             </Form.Group>
