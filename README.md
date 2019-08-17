@@ -2,4 +2,26 @@
 
 A work in progess always...
 
-built with Gatsby, Contentful and styling from react-bootstrap.
+## Built With
+
+* GatsbyJS
+* ReactJS
+* Contentful
+* Netlify Functions to hide API work
+* SASS
+
+## Authors
+
+* **Scott Caudle** - *Initial work* - [scotdle](https://github.com/scotdle)
+
+
+
+## License
+
+This project is licensed under the MIT License -
+
+## Acknowledgments
+
+* Special thanks to the kind folks at Netlify for answering all of my questions! 
+
+
