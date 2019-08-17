@@ -53,7 +53,7 @@ class NameForm extends React.Component {
                     />
                     <div className={'formContainer'} id={'formContainer'}>
 
-                        <h1 className={'nameHeader'}>I hope we can talk soon {this.state.yourName}.</h1>
+                        <h1 className={'nameHeader'}>I hope we can talk soon {this.state.yourName}</h1>
                         <form name="contact"
                               method="post"
                               action=""
