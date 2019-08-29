@@ -15,11 +15,6 @@ A work in progess always...
 * **Scott Caudle** - *Initial work* - [scotdle](https://github.com/scotdle)
 
 
-
-## License
-
-This project is licensed under the MIT License -
-
 ## Acknowledgments
 
 * Special thanks to the kind folks at Netlify for answering all of my questions! 
